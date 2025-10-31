@@ -1,0 +1,54 @@
+
+{
+  "services": [
+    {
+      "name": "db",
+      "type": "postgres",
+      "version": "15"
+    },
+    {
+      "name": "backend",
+      "type": "app",
+      "build": {
+        "type": "dockerfile",
+        "path": "./backend/Dockerfile"
+      },
+      "start": "uvicorn main:app --host 0.0.0.0 --port $PORT",
+      "ports": [
+        {
+          "internal": 8000,
+          "external": 8000
+        }
+      ],
+      "env": {
+        "DATABASE_URL": "${services.db.DATABASE_URL}",
+        "PORT": "8000"
+      },
+      "dependsOn": ["db"]
+    },
+    {
+      "name": "frontend",
+      "type": "app",
+      "build": {
+        "type": "static",
+        "path": "./"
+      },
+      "start": "nginx -c /app/nginx.conf -g 'daemon off;'",
+      "ports": [
+        {
+          "internal": 80,
+          "external": 3000
+        }
+      ],
+      "files": [
+        {
+          "path": "/app/nginx.conf",
+          "contentFile": "./nginx.conf"
+        }
+      ],
+      "domains": {
+        "primary": "chatwoot-dash.tu-dominio.com"
+      }
+    }
+  ]
+}
