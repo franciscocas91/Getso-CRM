@@ -26,7 +26,7 @@ const LoginPage: React.FC = () => {
         <div className="flex flex-col items-center">
             <div className="flex items-center mb-4">
                 <LogoIcon className="h-12 w-auto text-sky-400" />
-                <h1 className="text-3xl font-bold ml-3 text-white">Chatwoot Dash</h1>
+                <h1 className="text-3xl font-bold ml-3 text-white">Getso</h1>
             </div>
             <p className="text-slate-400">Inicia sesión para continuar</p>
         </div>

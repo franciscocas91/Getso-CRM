@@ -11,7 +11,7 @@
       "type": "app",
       "build": {
         "type": "dockerfile",
-        "path": "./backend/Dockerfile"
+        "path": "./backend"
       },
       "start": "uvicorn main:app --host 0.0.0.0 --port $PORT",
       "ports": [

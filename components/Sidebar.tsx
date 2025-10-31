@@ -45,7 +45,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeView, onViewChange, user, insta
     <aside className={`bg-slate-950/70 backdrop-blur-lg border-r border-slate-800 flex-shrink-0 p-4 flex flex-col transition-all duration-300 ease-in-out ${isCollapsed ? 'w-20' : 'w-64'}`}>
       <div className={`flex items-center mb-8 transition-all duration-300 ${isCollapsed ? 'justify-center' : 'px-2'}`}>
         <LogoIcon className="h-8 w-auto text-sky-400 flex-shrink-0" />
-        {!isCollapsed && <h1 className="text-xl font-bold ml-2 text-white truncate">Chatwoot Dash</h1>}
+        {!isCollapsed && <h1 className="text-xl font-bold ml-2 text-white truncate">Getso</h1>}
       </div>
       <nav className="flex-grow">
         {user.role === 'admin' && (

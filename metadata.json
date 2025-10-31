@@ -1,5 +1,5 @@
 {
-  "name": "Chatwoot Multi-Tenant Dashboard",
+  "name": "Getso CRM",
   "description": "A centralized dashboard for analyzing and monitoring multiple Chatwoot instances, providing key metrics, anomaly detection, and performance comparisons in a visually appealing and intuitive interface.",
   "requestFramePermissions": []
 }

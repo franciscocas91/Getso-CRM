@@ -1,4 +1,4 @@
-# DOCUMENTACIÓN COMPLETA: Dashboard CRM para Chatwoot
+# DOCUMENTACIÓN COMPLETA: Getso CRM
 
 ## 1. Visión General del Proyecto
 
@@ -180,5 +180,3 @@ Cada pestaña del dashboard corresponde a un módulo dentro del directorio `feat
     -   Añade un `case 'Reportes'` en el `switch` de `renderTabContent` para renderizar tu `ReportsPage`.
 
 Este proceso asegura que la nueva funcionalidad esté encapsulada y sea coherente con la arquitectura existente.
-```
-
